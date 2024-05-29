@@ -16,10 +16,17 @@ formArray.forEach(function (element) {
         let inputValue = getInputValue();
         const keyValue = "d19e9cd890dd5522e26007e2f66e02ee"; 
 
-       let infoObject = fetchFunction(inputValue, keyValue);
+        cityName(inputValue);
 
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=${keyValue}`;
 
-       console.log(infoObject)
+        fetch(url, {method : "GET"})
+            .then((response) => response.json())
+            .then((data) => {
+                currentTemp(data.main.temp);
+                weatherDetails(data.main.temp_max, data.main.temp_min, data.main.humidity, data.wind.speed);
+            }).catch((err) => console.error(err));
+
     })
 })
 
@@ -33,14 +40,30 @@ function getInputValue () {
     return inputVal;
 }
 
+function cityName(input) {
+    const cityText = document.getElementById("cityText");
 
-function fetchFunction(input, key) {
+    cityText.textContent = input[0].toUpperCase() + input.slice(1);
+}
 
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${key}`;
 
-    fetch(url, {method : "GET"})
-        .then((response) => response.json())
-        .then((data) => {
-            return data;
-        })
+function currentTemp(curr) {
+    const currTemp = document.getElementById("currTemp");
+
+    currTemp.textContent = `${Math.round((curr - 32) / 1.8)}°`
+}
+
+function weatherDetails (max, min, hum, wind) {
+
+    const tempMax = document.getElementById("tempMax");
+    tempMax.textContent = `${Math.round((max - 32) / 1.8)}°`;
+
+    const tempMin = document.getElementById("tempMin");
+    tempMin.textContent = `${Math.round((min - 32) / 1.8)}°`;
+
+    const humidity = document.getElementById("humidity");
+    humidity.textContent = `${hum}%`;
+
+    const windSpeed = document.getElementById("windSpeed");
+    windSpeed.textContent = `${wind} km/h`;
 }
