@@ -1,0 +1,212 @@
+@media (width >= 700px) {
+
+    body {
+        background-image: url(./Images/ThunderStormBackgroundImage.svg);
+    }
+
+
+    header {
+        padding: 25px 39px 0 39px;
+    }
+
+    header> img {
+        width: 60px;
+        height: 31px;
+    }
+
+    form > input {
+        width: 250px;
+        height: 25px;
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+
+    form > input::placeholder {
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+
+    form > button > img {
+        width: 22px;
+        height: 20px;
+    }
+
+    header > div > div {
+        width: 272px;
+    }
+
+    .city-temp-container {
+        margin-top: 220px;
+        padding: 0 39px 0 39px;
+        gap: 15px;
+    }
+
+    .city-temp-container > h1 {
+        font-size: 120px;
+        line-height: 140.63px;
+        letter-spacing: -0.08em; 
+        top: 22px; 
+    }
+
+    .city-temp-container > div > h5 {
+        font-size: 48px;
+        line-height: 56.25px;
+    }
+
+    .city-temp-container > div > p {
+        font-size: 16px;
+        line-height: 18.75px;
+    }
+
+    .city-temp-container > img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .weather-details-container {
+        margin-top: 81px;
+        padding: 107px 39px 40px 39px;
+    }
+
+    .weather-details-container > h4 {
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+
+    .weather-details-container > div > h3 {
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+
+    .details-right-side > p {
+        font-size: 18px;
+        line-height: 21.09px;
+    }
+
+    .details-right-side > img {
+        width: 14px;
+        height: 26px;
+    }
+}
+
+@media (width >= 1111px) {
+
+    body {
+        background-image: url(./Images/snowyBackgroundImage.svg);
+        background-size: cover;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100vh;
+    }
+
+    .left-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .input-box {
+        display: none;
+    }
+
+    .input-box2 {
+        display: block;
+    }
+    header {
+        padding: 37px 0 0 117px;
+    }
+
+    header > img {
+        width: 90px;
+        height: 47px;
+    }
+
+    form {
+        align-items: flex-start;
+        position: relative;
+    }
+    form > input {
+        width: 370px;
+        height: 47px;
+        font-size: 20px;
+        line-height: 23.44px;
+    }
+
+    form >input::placeholder {
+        font-size: 20px;
+        line-height: 23.44px;
+    }
+
+    form > button > img {
+        width: 28px;
+        height: 28px;
+        position: relative;
+        top: 8px;
+    }
+
+    .header > div > div {
+        width: 400px;
+    }
+
+    .city-temp-container {
+        padding: 0 0 122px 117px;
+    }
+
+    .city-temp-container > h1 {
+        font-size: 143px;
+        line-height: 167.58px;
+        letter-spacing: -0.08em;
+    }
+
+    .city-temp-container > div > h5 {
+        font-size: 60px;;
+        line-height: 70.31px;    
+    }
+
+
+    .city-temp-container > div > p{
+        font-size: 18px;
+        line-height: 21.09px;
+        
+    }
+
+    .city-temp-container > img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .weather-details-container {
+        height: 100vh;
+        margin-top: 0;
+        padding: 40px 120px 115px 35px;
+        width: 40%;
+        border-top: none;
+        border-left: 5px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .weather-details-container > h4 {
+        text-align: left;
+    }
+
+    .weather-details-container > div > h3 {
+        text-align: left;
+    }
+
+    .weather-details-box {
+        gap: 45px;
+    }
+
+    .details-right-side > img {
+        width: 30px;
+        height: 35px;
+    }
+}
+
+
+@media (width < 1111px) {
+    .input-box2 {
+        display: none;
+    }
+}

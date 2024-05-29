@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <div class="left-container">
+        <header>
+            <img src="./Icons/siteIcon.svg" alt="siteIcon">
+            <div class="input-box">
+                <form action="submit" id="form1">
+                    <input type="text" placeholder="Search Location..." id="input">
+                    <button type="submit">
+                        <img src="./Icons/searchIcon.svg" alt="searchIcon" >
+                    </button>
+                </form>
+                <div class="input-rectangle"></div>
+            </div>
+        </header>
+        <div class="city-temp-container">
+            <h1>16°</h1>
+            <div class="city-box">
+                <h5>London</h5>
+                <p>06:09 - Monday, 9 Sep 23</p>
+            </div>
+            <img src="./Icons/cloudyIcon.svg" alt="cloudyIcon">
+        </div>
+    </div>
+    <div class="weather-details-container">
+        <div class="input-box2">
+            <form action="submit" id="form2">
+                <input type="text" placeholder="Search Location...">
+                <button type="submit">
+                    <img src="./Icons/searchIcon.svg" alt="searchIcon" >
+                </button>
+            </form>
+            <div class="input-rectangle"></div>
+        </div>
+        <h4>Weather Details...</h4>
+        <div class="weather-details-box">
+            <h3>thunderstorm with light drizzle</h3>
+            <div class="weather-details">
+                <p>Temp max</p>
+                <div class="details-right-side">
+                    <p>19°</p>
+                    <img src="./Icons/TempMaxIcon.svg" alt="">
+                </div>
+            </div>
+            <div class="weather-details">
+                <p>Temp min</p>
+                <div class="details-right-side">
+                    <p>15°</p>
+                    <img src="./Icons/tempMinIcon.svg" alt="">
+                </div>
+            </div>
+            <div class="weather-details">
+                <p>Humidity</p>
+                <div class="details-right-side">
+                    <p>58%</p>
+                    <img src="./Icons/humidityIcon.svg" alt="">
+                </div>
+            </div>
+            <div class="weather-details">
+                <p>Cloudy</p>
+                <div class="details-right-side">
+                    <p>40%</p>
+                    <img src="./Icons/clodyDetailsIcons.svg" alt="" class="cloudy-img">
+                </div>
+            </div>
+            <div class="weather-details">
+                <p>Wind</p>
+                <div class="details-right-side">
+                    <p>5km/h</p>
+                    <img src="./Icons/windIcon.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bottom-rectangle"></div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
